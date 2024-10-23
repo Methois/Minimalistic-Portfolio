@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    height: 100vh; /* Vul de volledige hoogte van de viewport */
+    background-color: #383838; /* Basis kleur voor de achtergrond */
+    background-image: 
+        radial-gradient(circle, rgb(85, 75, 65) 10%, transparent 10%), /* Dichte lichte stippen */
+        radial-gradient(circle, rgb(85, 75, 65) 5%, transparent 5%); /* Nog kleinere stippen */
+    background-size: 10px 10px, 20px 20px; /* Kleinere stippen en het patroon */
+    font-family: Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.foto {
+    margin-top: 0px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-item {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: #f33838;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+}
+
+.github-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 100px;
+}
+
+.github-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.github-logo {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.github-box span {
+    font-size: 18px;
+    font-weight: bold;
+}
+.more {
+    margin-top: -150px;
+    text-align: center;
+}
+
+.cv-button {
+    display: inline-block;
+    background-color: #f33838;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 0px;
+}
+
+.cv-button:hover {
+    background-color: #f32929;
+    transform: scale(1.05);
+}
+.rood { 
+    color: #f33838;
+}
+.title h1{
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 350px;
+}
+.overmij {
+    background-color: white;
+    background-image: 
+        radial-gradient(circle, rgb(255, 255, 255) 5%, transparent 10%),
+        radial-gradient(circle, rgb(190, 190, 190) 5%, transparent 5%);
+    background-size: 10px 10px, 20px 20px; 
+    border-radius: 60px;
+    width: 48%; /* Behoud de breedte van de overmij-sectie */
+    height: auto; /* Gebruik auto hoogte voor flexibele content */
+    margin-right: 20px; /* Ruimte tussen de tekst en de foto */
+    padding: 30px; /* Extra padding voor ruimte rondom de tekst */
+    margin-left: 30px;
+}
+
+.overmij p {
+    font-size: 27px;
+    line-height: 1.5; /* Betere leesbaarheid door meer ruimte tussen regels */
+    color: #333; /* Donkere kleur voor betere contrast */
+}
+
+.button-container {
+    margin-top: 20px; /* Ruimte tussen tekst en knoppen */
+    display: flex; /* Flexbox voor horizontale uitlijning */
+    justify-content: center; /* Centraal uitlijnen */
+    gap: 20px; /* Ruimte tussen de knoppen */
+}
+
+.social-button {
+    background-color: #f33838; /* Rood thema */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #f32929; /* Donkerder rood bij hover */
+    transform: scale(1.05);
+}
+
+.pfp-container {
+    position: relative; /* Maak de container relatief */
+    display: flex; /* Flexbox voor positionering */
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
+    margin-left: 10%; /* Ruimte tussen de tekst en de foto */
+    height: 550px; /* Hoogte om het midden te centreren */
+    width: 550px; /* Breedte om het midden te centreren */
+}
+
+.pfp-container::before {
+    content: ""; /* Zorg voor een pseudo-element */
+    position: absolute; /* Absoluut positioneren binnen de container */
+    top: -15px; /* Bovenrand 15px */
+    left: -15px; /* Linker rand 15px */
+    right: -15px; /* Rechter rand 15px */
+    bottom: -15px; /* Onderkant 15px */
+    border-radius: 50%; /* Maakt het ook rond */
+    background-color: white; /* Witte achtergrond */
+    background-image: 
+        radial-gradient(circle, rgb(255, 255, 255) 5%, transparent 10%),
+        radial-gradient(circle, rgb(190, 190, 190) 5%, transparent 5%); /* Gestippeld effect */
+    z-index: -1; /* Plaats het achter de afbeelding */
+}
+
+.pfp {
+    width: 550px; /* Breedte van de cirkel */
+    height: 550px; /* Hoogte van de cirkel */
+    border-radius: 50%; /* Maakt de cirkel rond */
+    overflow: hidden; /* Zorg ervoor dat de afbeelding binnen de cirkel blijft */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionele schaduw voor diepte */
+}
+
+.pfp img {
+    width: 100%; /* Zorg ervoor dat de afbeelding de container vult */
+    height: auto; /* Houd de hoogte in verhouding */
+    display: block; /* Zorg ervoor dat er geen ruimte onder de afbeelding is */
+}
+.container {
+    display: flex; /* Zorg ervoor dat de container flexbox gebruikt */
+    align-items: center; /* Centreer de elementen verticaal */
+    margin-top: 170px; /* Zorg ervoor dat de container van bovenaf goed gepositioneerd is */
+}
