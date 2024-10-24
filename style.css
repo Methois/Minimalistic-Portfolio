@@ -1,11 +1,17 @@
+:root {
+    --primary-color: #f33838;
+    --background-color: #383838;
+    --text-color: #fff;
+}
+
 body {
     margin: 0;
-    height: 100vh; /* Vul de volledige hoogte van de viewport */
-    background-color: #383838; /* Basis kleur voor de achtergrond */
+    height: 100vh;
+    background-color: var(--background-color);
     background-image: 
-        radial-gradient(circle, rgb(63, 63, 63) 10%, transparent 10%), /* Dichte lichte stippen */
-        radial-gradient(circle, rgb(63, 63, 63) 5%, transparent 5%); /* Nog kleinere stippen */
-    background-size: 10px 10px, 20px 20px; /* Kleinere stippen en het patroon */
+        radial-gradient(circle, rgb(63, 63, 63) 10%, transparent 10%),
+        radial-gradient(circle, rgb(63, 63, 63) 5%, transparent 5%);
+    background-size: 10px 10px, 20px 20px;
     font-family: Arial, sans-serif;
 }
 html {
@@ -19,11 +25,11 @@ html {
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #f33838;
+    background-color: var(--primary-color);
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: #f33838;
+    background-color: var(--primary-color);
 }
 .foto {
     margin-top: 0px;
@@ -35,16 +41,16 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px; /* Zorg voor genoeg ruimte aan de zijkanten */
+    padding: 20px 10px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #383838; /* Basis kleur voor de achtergrond */
+    background-color: #383838;
     background-image: 
-        radial-gradient(circle, rgb(63, 63, 63) 10%, transparent 10%), /* Dichte lichte stippen */
-        radial-gradient(circle, rgb(63, 63, 63) 5%, transparent 5%); /* Nog kleinere stippen */
-    background-size: 10px 10px, 20px 20px; /* Kleinere stippen en het patroon */
+        radial-gradient(circle, rgb(63, 63, 63) 10%, transparent 10%),
+        radial-gradient(circle, rgb(63, 63, 63) 5%, transparent 5%);
+    background-size: 10px 10px, 20px 20px;
 }
 
 .navbar-links {
@@ -54,10 +60,10 @@ html {
 .navbar-item {
     color: white;
     text-decoration: none;
-    font-size: 28px; /* Kleinere lettergrootte voor betere uitlijning */
+    font-size: 28px;
     font-weight: bold;
     transition: color 0.3s ease;
-    padding: 10px 15px; /* Voeg padding toe voor een betere klikbaarheid */
+    padding: 10px 15px;
 }
 
 .navbar-item:hover {
@@ -97,10 +103,6 @@ html {
     font-weight: bold;
 }
 
-.github-box span {
-    font-size: 18px;
-    font-weight: bold;
-}
 .more {
     margin-top: -150px;
     text-align: center;
@@ -138,28 +140,28 @@ html {
         radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 5%);
     background-size: 10px 10px, 20px 20px; 
     border-radius: 40px;
-    width: 48%; /* Behoud de breedte van de overmij-sectie */
-    height: auto; /* Gebruik auto hoogte voor flexibele content */
-    margin-right: 20px; /* Ruimte tussen de tekst en de foto */
-    padding: 30px; /* Extra padding voor ruimte rondom de tekst */
+    width: 48%;
+    height: auto;
+    margin-right: 20px;
+    padding: 30px;
     margin-left: 30px;
 }
 
 .overmij p {
     font-size: 27px;
-    line-height: 1.5; /* Betere leesbaarheid door meer ruimte tussen regels */
-    color: #333; /* Donkere kleur voor betere contrast */
+    line-height: 1.5;
+    color: #333;
 }
 
 .button-container {
-    margin-top: 20px; /* Ruimte tussen tekst en knoppen */
-    display: flex; /* Flexbox voor horizontale uitlijning */
-    justify-content: center; /* Centraal uitlijnen */
-    gap: 20px; /* Ruimte tussen de knoppen */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social-button {
-    background-color: #f33838; /* Rood thema */
+    background-color: #f33838;
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
@@ -169,56 +171,56 @@ html {
 }
 
 .social-button:hover {
-    background-color: #f32929; /* Donkerder rood bij hover */
+    background-color: #f32929;
     transform: scale(1.05);
 }
 
 .pfp-container {
-    position: relative; /* Maak de container relatief */
-    display: flex; /* Flexbox voor positionering */
-    justify-content: center; /* Horizontaal centreren */
-    align-items: center; /* Verticaal centreren */
-    margin-left: 10%; /* Ruimte tussen de tekst en de foto */
-    height: 550px; /* Hoogte om het midden te centreren */
-    width: 550px; /* Breedte om het midden te centreren */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    height: 550px;
+    width: 550px;
 }
 
 .pfp-container::before {
-    content: ""; /* Zorg voor een pseudo-element */
-    position: absolute; /* Absoluut positioneren binnen de container */
-    top: -15px; /* Bovenrand 15px */
-    left: -15px; /* Linker rand 15px */
-    right: -15px; /* Rechter rand 15px */
-    bottom: -15px; /* Onderkant 15px */
-    border-radius: 50%; /* Maakt het ook rond */
-    background-color: white; /* Witte achtergrond */
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 50%;
+    background-color: white;
     background-image: 
         radial-gradient(circle, rgb(255, 255, 255) 5%, transparent 10%),
-        radial-gradient(circle, rgb(190, 190, 190) 5%, transparent 5%); /* Gestippeld effect */
-    z-index: -1; /* Plaats het achter de afbeelding */
+        radial-gradient(circle, rgb(190, 190, 190) 5%, transparent 5%);
+    z-index: -1;
 }
 
 .pfp {
-    width: 550px; /* Breedte van de cirkel */
-    height: 550px; /* Hoogte van de cirkel */
-    border-radius: 50%; /* Maakt de cirkel rond */
-    overflow: hidden; /* Zorg ervoor dat de afbeelding binnen de cirkel blijft */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionele schaduw voor diepte */
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pfp img {
-    width: 100%; /* Zorg ervoor dat de afbeelding de container vult */
-    height: auto; /* Houd de hoogte in verhouding */
-    display: block; /* Zorg ervoor dat er geen ruimte onder de afbeelding is */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .container {
     display: flex;
     align-items: center;
     margin-top: 170px;
-    flex-wrap: wrap; /* Voorkom dat de elementen naast elkaar worden geplaatst bij te weinig ruimte */
-    display: flex; /* Zorg ervoor dat de container flexbox gebruikt */
-    align-items: center; /* Centreer de elementen verticaal */
-    margin-top: 170px; /* Zorg ervoor dat de container van bovenaf goed gepositioneerd is */
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    margin-top: 170px;
 }
 #skills {
     color: white;
@@ -228,42 +230,37 @@ html {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-  }
+}
 
-  
-  #skills ul {
+#skills ul {
     list-style: none;
     padding: 0;
-  }
-  
-  #skills ul li {
+}
+
+#skills ul li {
     display: inline-block;
     margin: 0 15px;
-  }
+}
 
-/* Skills-container styling: zorg dat alles in het midden staat */
 .skills-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 100%; /* Zorg dat de sectie de volledige breedte inneemt */
-    max-width: 900px; /* Limiteer de breedte van de sectie zodat het niet te breed wordt */
+    width: 100%;
+    max-width: 900px;
 }
 
-/* Styling voor elke individuele skill */
 .skill {
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 100%; /* Volledige breedte van de container */
+    width: 100%;
 }
 
-/* Icoon grootte */
 .skill-icon {
     font-size: 40px;
 }
 
-/* Progress bar styling */
 .progress-bar {
     flex-grow: 1;
     height: 30px;
@@ -281,99 +278,155 @@ html {
     border-radius: 15px 0 0 15px;
 }
 
-/* Tekst voor de skill naam en percentage */
 .skill span {
     font-size: 24px;
     font-weight: bold;
     color: white;
 }
 
-/* Percentage styling */
 .percentage {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    margin-left: 15px; /* Ruimte tussen de balk en percentage */
-    white-space: nowrap; /* Zorg dat percentage niet op een nieuwe regel komt */  
+    margin-left: 15px;
+    white-space: nowrap;
 }
 
-
 .portfolio {
-    background-color: #fff; /* Witte achtergrond voor de portfolio-sectie */
+    background-color: #fff;
     background-image: 
     radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 10%),
     radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 5%);
     background-size: 10px 10px, 20px 20px; 
-    padding: 50px 30px; /* Ruimte rondom de inhoud */
-    border-radius: 50px; /* Hoeken afronden */
-    margin: 250px 25px; /* Ruimte van 50px boven en 25px aan de zijkanten */
-    width: 100%; /* Breedte van 90% van de viewport */
-    
+    padding: 50px 30px;
+    border-radius: 50px;
+    margin: 250px 25px;
+    width: 100%;
 }
 
 .portfolio h1 {
-    color: #333; /* Donkere kleur voor de titel */
-    text-align: center; /* Centraal uitlijnen */
-    font-size: 60px; /* Grote lettergrootte */
+    color: #333;
+    text-align: center;
+    font-size: 60px;
 }
 
 .portfolio p {
-    text-align: center; /* Centraal uitlijnen */
-    font-size: 24px; /* Normale lettergrootte */
-    color: #666; /* Lichtere kleur voor de tekst */
+    text-align: center;
+    font-size: 24px;
+    color: #666;
 }
 
 .portfolio-container {
-    display: flex; /* Flexbox voor uitlijning */
-    flex-direction: column; /* Kolomrichting voor de items */
-    align-items: center; /* Centreren van items */
-    margin-top: 20px; /* Ruimte boven de container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .portfolio-item {
-    background-color: #f0f0f0; /* Lichte achtergrondkleur voor de items */
+    background-color: #f0f0f0;
     background-image: 
     radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 10%),
     radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 5%);
     background-size: 10px 10px, 20px 20px; 
-    padding: 20px; /* Ruimte rondom de inhoud */
-    border-radius: 20px; /* Hoeken afronden */
-    margin: 15px 25px; /* Ruimte tussen de items met zijkant marges */
-    text-align: center; /* Centreren van de inhoud */
-    width: 90%; /* Breedte met 100% minus de margins */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Schaduw achter de items */
+    padding: 20px;
+    border-radius: 20px;
+    margin: 15px 25px;
+    text-align: center;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
 
 .portfolio-item h2 {
-    color: #333; /* Donkere kleur voor de projecttitel */
-    font-size: 28px; /* Grote lettergrootte */
+    color: #333;
+    font-size: 28px;
 }
 
 .portfolio-item .date {
-    color: #999; /* Grijze kleur voor de datum */
-    font-size: 18px; /* Normale lettergrootte voor de datum */
+    color: #999;
+    font-size: 18px;
 }
 
 .portfolio-item p {
-    color: #555; /* Iets lichtere kleur voor de beschrijving */
-    font-size: 20px; /* Normale lettergrootte */
+    color: #555;
+    font-size: 20px;
 }
 
 .portfolio-link {
-    display: inline-block; /* Blok voor de link */
-    background-color: #f33838; /* Rood thema */
-    color: white; /* Witte tekstkleur */
-    padding: 10px 20px; /* Ruimte rondom de tekst */
-    border-radius: 25px; /* Hoeken afronden */
-    text-decoration: none; /* Geen onderlijning */
-    margin-top: 10px; /* Ruimte boven de link */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Animaties voor hover */
+    display: inline-block;
+    background-color: #f33838;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .portfolio-link:hover {
-    background-color: #f32929; /* Donkerder rood bij hover */
-    transform: scale(1.05); /* Vergroten bij hover */
+    background-color: #f32929;
+    transform: scale(1.05);
+}
+.footer {
+    text-align: center;
+    justify-content: center;
+    background-color: #383838;
+    color: white;
+    margin-left: 35%;
+    padding: 20px 0;
 }
 
+.footer-container {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
 
+.footer-links, .footer-contact, .footer-social {
+    margin: 0 20px; /* Spacing between items */
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    color: var(--primary-color);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links a,
+.footer-social a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+.footer-social a {
+    display: block; /* Zet de sociale media als blokken om ze onder elkaar te zetten */
+    margin: 5px 0; /* Voegt ruimte toe tussen de sociale media links */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+.footer h3 {
+    margin-bottom: 10px; /* Space between heading and list */
+}
