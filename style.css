@@ -294,6 +294,86 @@ html {
     font-weight: bold;
     color: white;
     margin-left: 15px; /* Ruimte tussen de balk en percentage */
-    white-space: nowrap; /* Zorg dat percentage niet op een nieuwe regel komt */
+    white-space: nowrap; /* Zorg dat percentage niet op een nieuwe regel komt */  
 }
+
+
+.portfolio {
+    background-color: #fff; /* Witte achtergrond voor de portfolio-sectie */
+    background-image: 
+    radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 10%),
+    radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 5%);
+    background-size: 10px 10px, 20px 20px; 
+    padding: 50px 30px; /* Ruimte rondom de inhoud */
+    border-radius: 50px; /* Hoeken afronden */
+    margin: 250px 25px; /* Ruimte van 50px boven en 25px aan de zijkanten */
+    width: 100%; /* Breedte van 90% van de viewport */
+    
+}
+
+.portfolio h1 {
+    color: #333; /* Donkere kleur voor de titel */
+    text-align: center; /* Centraal uitlijnen */
+    font-size: 60px; /* Grote lettergrootte */
+}
+
+.portfolio p {
+    text-align: center; /* Centraal uitlijnen */
+    font-size: 24px; /* Normale lettergrootte */
+    color: #666; /* Lichtere kleur voor de tekst */
+}
+
+.portfolio-container {
+    display: flex; /* Flexbox voor uitlijning */
+    flex-direction: column; /* Kolomrichting voor de items */
+    align-items: center; /* Centreren van items */
+    margin-top: 20px; /* Ruimte boven de container */
+}
+
+.portfolio-item {
+    background-color: #f0f0f0; /* Lichte achtergrondkleur voor de items */
+    background-image: 
+    radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 10%),
+    radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 5%);
+    background-size: 10px 10px, 20px 20px; 
+    padding: 20px; /* Ruimte rondom de inhoud */
+    border-radius: 20px; /* Hoeken afronden */
+    margin: 15px 25px; /* Ruimte tussen de items met zijkant marges */
+    text-align: center; /* Centreren van de inhoud */
+    width: 90%; /* Breedte met 100% minus de margins */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Schaduw achter de items */
+}
+
+
+.portfolio-item h2 {
+    color: #333; /* Donkere kleur voor de projecttitel */
+    font-size: 28px; /* Grote lettergrootte */
+}
+
+.portfolio-item .date {
+    color: #999; /* Grijze kleur voor de datum */
+    font-size: 18px; /* Normale lettergrootte voor de datum */
+}
+
+.portfolio-item p {
+    color: #555; /* Iets lichtere kleur voor de beschrijving */
+    font-size: 20px; /* Normale lettergrootte */
+}
+
+.portfolio-link {
+    display: inline-block; /* Blok voor de link */
+    background-color: #f33838; /* Rood thema */
+    color: white; /* Witte tekstkleur */
+    padding: 10px 20px; /* Ruimte rondom de tekst */
+    border-radius: 25px; /* Hoeken afronden */
+    text-decoration: none; /* Geen onderlijning */
+    margin-top: 10px; /* Ruimte boven de link */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animaties voor hover */
+}
+
+.portfolio-link:hover {
+    background-color: #f32929; /* Donkerder rood bij hover */
+    transform: scale(1.05); /* Vergroten bij hover */
+}
+
 
