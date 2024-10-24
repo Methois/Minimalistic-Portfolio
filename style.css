@@ -3,13 +3,27 @@ body {
     height: 100vh; /* Vul de volledige hoogte van de viewport */
     background-color: #383838; /* Basis kleur voor de achtergrond */
     background-image: 
-        radial-gradient(circle, rgb(85, 75, 65) 10%, transparent 10%), /* Dichte lichte stippen */
-        radial-gradient(circle, rgb(85, 75, 65) 5%, transparent 5%); /* Nog kleinere stippen */
+        radial-gradient(circle, rgb(63, 63, 63) 10%, transparent 10%), /* Dichte lichte stippen */
+        radial-gradient(circle, rgb(63, 63, 63) 5%, transparent 5%); /* Nog kleinere stippen */
     background-size: 10px 10px, 20px 20px; /* Kleinere stippen en het patroon */
     font-family: Arial, sans-serif;
 }
 html {
     scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f33838;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #f33838;
 }
 .foto {
     margin-top: 0px;
@@ -21,24 +35,29 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 10px; /* Zorg voor genoeg ruimte aan de zijkanten */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    background-color: #383838; /* Basis kleur voor de achtergrond */
+    background-image: 
+        radial-gradient(circle, rgb(63, 63, 63) 10%, transparent 10%), /* Dichte lichte stippen */
+        radial-gradient(circle, rgb(63, 63, 63) 5%, transparent 5%); /* Nog kleinere stippen */
+    background-size: 10px 10px, 20px 20px; /* Kleinere stippen en het patroon */
 }
 
 .navbar-links {
     display: flex;
-    gap: 40px;
 }
 
 .navbar-item {
     color: white;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 28px; /* Kleinere lettergrootte voor betere uitlijning */
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 10px 15px; /* Voeg padding toe voor een betere klikbaarheid */
 }
 
 .navbar-item:hover {
@@ -60,7 +79,7 @@ html {
     text-decoration: none;
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 .github-box:hover {
@@ -71,6 +90,11 @@ html {
 .github-logo {
     width: 30px;
     margin-right: 10px;
+}
+
+.github-box span {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .github-box span {
@@ -110,10 +134,10 @@ html {
 .overmij {
     background-color: white;
     background-image: 
-        radial-gradient(circle, rgb(255, 255, 255) 5%, transparent 10%),
-        radial-gradient(circle, rgb(190, 190, 190) 5%, transparent 5%);
+        radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 10%),
+        radial-gradient(circle, rgb(211, 210, 210) 5%, transparent 5%);
     background-size: 10px 10px, 20px 20px; 
-    border-radius: 60px;
+    border-radius: 40px;
     width: 48%; /* Behoud de breedte van de overmij-sectie */
     height: auto; /* Gebruik auto hoogte voor flexibele content */
     margin-right: 20px; /* Ruimte tussen de tekst en de foto */
@@ -188,7 +212,88 @@ html {
     display: block; /* Zorg ervoor dat er geen ruimte onder de afbeelding is */
 }
 .container {
+    display: flex;
+    align-items: center;
+    margin-top: 170px;
+    flex-wrap: wrap; /* Voorkom dat de elementen naast elkaar worden geplaatst bij te weinig ruimte */
     display: flex; /* Zorg ervoor dat de container flexbox gebruikt */
     align-items: center; /* Centreer de elementen verticaal */
     margin-top: 170px; /* Zorg ervoor dat de container van bovenaf goed gepositioneerd is */
 }
+#skills {
+    color: white;
+    margin-top: 259px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  
+  #skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #skills ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+
+/* Skills-container styling: zorg dat alles in het midden staat */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%; /* Zorg dat de sectie de volledige breedte inneemt */
+    max-width: 900px; /* Limiteer de breedte van de sectie zodat het niet te breed wordt */
+}
+
+/* Styling voor elke individuele skill */
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Volledige breedte van de container */
+}
+
+/* Icoon grootte */
+.skill-icon {
+    font-size: 40px;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    flex-grow: 1;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #f33838;
+    transition: width 0.5s ease;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Tekst voor de skill naam en percentage */
+.skill span {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Percentage styling */
+.percentage {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-left: 15px; /* Ruimte tussen de balk en percentage */
+    white-space: nowrap; /* Zorg dat percentage niet op een nieuwe regel komt */
+}
+
