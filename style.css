@@ -372,29 +372,28 @@ html {
     background-color: #f32929;
     transform: scale(1.05);
 }
-/* Footer */
+
 .footer {
     text-align: center;
     background-color: #383838;
     color: white;
     padding: 20px 0;
-    width: 100%; /* Zorg ervoor dat de footer de volle breedte heeft */
-    position: relative; /* Relatieve positie in plaats van fixed */
+    width: 100%;
+    position: relative;
 }
 
 .footer-container {
     display: flex;
-    justify-content: center; /* Centraal uitlijnen */
-    align-items: center; /* Centraal uitlijnen verticaal */
-    flex-wrap: wrap; /* Toestaan dat items wikkelen indien nodig */
-    gap: 20px; /* Voeg ruimte toe tussen de items als dat nodig is */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-
 
 .footer-links,
 .footer-contact,
 .footer-social {
-    margin: 0 20px; /* Spacing tussen items */
+    margin: 0 20px;
 }
 
 .footer-links h3,
@@ -424,8 +423,8 @@ html {
 }
 
 .footer-social a {
-    display: block; /* Zet de sociale media als blokken om ze onder elkaar te zetten */
-    margin: 5px 0; /* Ruimte tussen sociale media links */
+    display: block;
+    margin: 5px 0;
 }
 
 .footer-bottom {
